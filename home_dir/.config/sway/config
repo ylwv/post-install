@@ -69,19 +69,22 @@ bindsym --no-repeat mod4+shift+7 move container to workspace number 7
 bindsym --no-repeat mod4+shift+8 move container to workspace number 8
 bindsym --no-repeat mod4+shift+9 move container to workspace number 9
 
-bindsym --no-repeat mod4+left  focus left
-bindsym --no-repeat mod4+down  focus down
-bindsym --no-repeat mod4+up    focus up
-bindsym --no-repeat mod4+right focus right
+bindsym --no-repeat mod4+left  exec swaymsg 'fullscreen disable; focus left'
+bindsym --no-repeat mod4+down  exec swaymsg 'fullscreen disable; focus down'
+bindsym --no-repeat mod4+up    exec swaymsg 'fullscreen disable; focus up'
+bindsym --no-repeat mod4+right exec swaymsg 'fullscreen disable; focus right'
 
-bindsym --no-repeat mod4+shift+left  move left
-bindsym --no-repeat mod4+shift+down  move down
-bindsym --no-repeat mod4+shift+up    move up
-bindsym --no-repeat mod4+shift+right move right
+bindsym --no-repeat mod4+shift+left  exec swaymsg 'fullscreen disable; move left'
+bindsym --no-repeat mod4+shift+down  exec swaymsg 'fullscreen disable; move down'
+bindsym --no-repeat mod4+shift+up    exec swaymsg 'fullscreen disable; move up'
+bindsym --no-repeat mod4+shift+right exec swaymsg 'fullscreen disable; move right'
 
 # everything else
 
-bar status_command i3status
+bar {
+    mode hide
+    status_command i3status
+}
 
 exec foot -s
 

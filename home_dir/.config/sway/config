@@ -81,10 +81,7 @@ bindsym --no-repeat mod4+shift+right exec swaymsg 'fullscreen disable; move righ
 
 # everything else
 
-bar {
-    mode hide
-    status_command i3status
-}
+bar status_command i3status
 
 exec foot -s
 
